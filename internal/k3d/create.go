@@ -112,11 +112,13 @@ func PrepareGitRepositories(
 	gitopsDir string,
 	gitopsTemplateBranch string,
 	gitopsTemplateURL string,
+	gitopsRepoName string,
 	DestinationMetaphorRepoURL string,
 	k1Dir string,
 	gitopsTokens *GitopsDirectoryValues,
 	metaphorDir string,
 	metaphorTokens *MetaphorTokenValues,
+	metaphorRepoName string,
 	gitProtocol string,
 	removeAtlantis bool,
 ) error {
@@ -149,7 +151,7 @@ func PrepareGitRepositories(
 
 	// ! metaphor
 	// * adjust the content for the gitops repo
-	err = AdjustMetaphorRepo(DestinationMetaphorRepoURL, gitopsDir, gitProvider, k1Dir)
+	err = AdjustMetaphorRepo(DestinationMetaphorRepoURL, gitopsDir, metaphorRepoName, gitProvider, k1Dir)
 	if err != nil {
 		return err
 	}

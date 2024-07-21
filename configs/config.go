@@ -37,6 +37,7 @@ type Config struct {
 	LocalArchitecture string
 	HomePath          string
 
+	ConfigName              string `env:"CONFIG_NAME"`
 	ClusterName             string `env:"CLUSTER_NAME"`
 	GitopsRepoPath          string
 	KubefirstLogPath        string `env:"KUBEFIRST_LOG_PATH" envDefault:"logs"`

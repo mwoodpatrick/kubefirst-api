@@ -93,7 +93,7 @@ func AdjustGitopsRepo(cloudProvider, clusterName, clusterType, gitopsRepoDir, gi
 	return nil
 }
 
-func AdjustMetaphorRepo(destinationMetaphorRepoGitURL, gitopsRepoDir, gitProvider, k1Dir string) error {
+func AdjustMetaphorRepo(destinationMetaphorRepoGitURL, gitopsRepoDir, metaphorRepoName, gitProvider, k1Dir string) error {
 
 	//* create ~/.k1/metaphor
 	metaphorDir := fmt.Sprintf("%s/metaphor", k1Dir)
