@@ -15,6 +15,7 @@
 # vendor/
 .vscode
 bin/
+kubefirst-api
 
 tmp
 launch.json
